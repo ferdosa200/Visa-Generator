@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    <title>Live CC Generator</title>
+</head>
+
+<body>
+
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>CC Generator</h3>
+                        <p>Fill in the data below.</p>
+                        <form class="requires-validation" method="post" novalidate>
+
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="num" placeholder="No. Of Cards" required>
+
+                            </div>
+
+                            <div class="col-md-12">
+                                <select name="card_type" class="form-select mt-3" required>
+                                    <option selected disabled value="">Type Of Card</option>
+                                    <option value="4">Visa</option>
+                                    <option value="51">Master Card</option>
+                                    <option value="6">RuPay</option>
+                                    <option value="34">American Express</option>
+                                </select>
+                            </div>
+
+                            <br>
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Generate</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
